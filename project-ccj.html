@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CCJ Records System | Jeorge Andrei</title>
+<meta name="description" content="A web-based records system that replaces paper tracking of complaints and derogatory records. I built the derogatory module: database design, backend logic and the user interface.">
+<meta name="theme-color" content="#071f18">
+<link rel="icon" type="image/webp" href="images/kise-pageicon.webp">
+<link rel="preload" href="fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/instrument.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+<script>
+  /* Set the theme before first paint so there is no flash */
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem('theme'); } catch (e) {}
+    if (!t) t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    document.documentElement.dataset.theme = t;
+    document.documentElement.classList.add('js');
+  })();
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+<symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+<symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+<symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></symbol>
+<symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></symbol>
+<symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></symbol>
+<symbol id="i-camera" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13.5" r="3.5"/></symbol>
+<symbol id="i-pen" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1-4L16 5l3 3L8 19z"/><path d="M14 7l3 3"/></symbol>
+<symbol id="i-shapes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="8" height="8" rx="1"/><circle cx="17" cy="7" r="4"/><path d="M12 21l4.5-8 4.5 8z"/></symbol>
+<symbol id="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a1 1 0 0 1 1-1h9"/></symbol>
+<symbol id="i-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></symbol>
+<symbol id="i-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></symbol>
+</defs></svg>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.php" aria-label="Jeorge Andrei, home"><span class="brand-mark">JA</span><span>Jeorge Andrei</span></a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href="index.php">Home</a><a href="about.html">About me</a><a href="internship.html">Internship</a><a href="projects.html" aria-current="page">Projects</a>
+      <a class="btn btn-ghost btn-sm" href="ELEVENCIONADO_JEORGE_ANDREI_RESUME.pdf" target="_blank" rel="noopener">Resume <svg class="i" aria-hidden="true"><use href="#i-ext"/></svg></a>
+    </nav>
+    <div class="header-tools">
+      <button class="icon-btn theme-toggle" type="button" aria-label="Switch theme"><svg class="i i-sun" aria-hidden="true"><use href="#i-sun"/></svg><svg class="i i-moon" aria-hidden="true"><use href="#i-moon"/></svg></button>
+      <button class="icon-btn menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><svg class="i" aria-hidden="true"><use href="#i-menu"/></svg></button>
+    </div>
+  </div>
+  <div class="progress" aria-hidden="true"></div>
+</header>
+<main id="main">
+<nav class="subnav" aria-label="Project pages"><div class="wrap"><a href="project-ccj.html" aria-current="page">Overview</a><a href="project-ccj-docs.html">Documentation</a></div></nav><div class="wrap">
+  <header class="case-head">
+    <a class="crumb" href="projects.html"><svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg> All projects</a>
+    <h1>Derogatory Records Management System for CCJ Department</h1>
+    <div class="tags"><span class="tag">Laravel Framework</span><span class="tag">PHP</span><span class="tag">JavaScript, CSS</span></div>
+  </header>
+  <div class="case-cover"><div class="screen"><div class="screen-bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="images/ccj-screenshots/ccjdashboard.png" alt="CCJ Records System dashboard screenshot" loading="eager"></div></div>
+  <dl class="facts">
+    <div><dt>My role</dt><dd>Module developer, derogatory records</dd></div>
+    <div><dt>Project type</dt><dd>Academic project</dd></div>
+    <div><dt>Built with</dt><dd>Laravel, PHP, JavaScript, CSS</dd></div>
+  </dl>
+  <section class="case-row"><h2>Goal</h2><div><p>The CCJ Department needed a centralized digital system to replace their manual paper-based process for tracking derogatory records and complaints.</p><p><strong>Key objectives:</strong> Improve efficiency, reduce errors, and provide better record organization and retrieval.</p></div></section>
+  <section class="case-row"><h2>My role</h2><div><p><strong>Module Developer, Derogatory Records Section</strong></p><p>Designed and implemented core functionality for storage, retrieval, and management of derogatory records. Worked on database schema, backend logic, and user interface.</p></div></section>
+  <section class="case-row"><h2>What I did</h2><div><ul class="check-list"><li>Conducted stakeholder interviews to gather requirements</li><li>Designed and implemented the Derogatory Module</li><li>Developed responsive web interface using HTML, CSS, and JavaScript</li></ul></div></section>
+  <section class="case-row"><h2>Deliverables</h2><div><ul class="check-list"><li>Fully functional derogatory records module</li><li>Technical documentation and user manual</li><li>Database schema for records management</li><li>Source code with version control</li></ul></div></section>
+  <section class="case-row"><h2>Results and impact</h2><div><p><strong>Measurable outcomes:</strong></p><ul class="check-list"><li>Reduced record processing time significantly</li><li>Eliminated manual data entry errors</li><li>Improved staff workflow efficiency</li><li>Easier access to historical records</li></ul></div></section>
+  <section class="case-row"><h2>Reflection</h2><div><p><strong>Key learnings:</strong> Importance of thorough requirements gathering and iterative development.</p><p><strong>Future improvements:</strong> Implement automated testing from the start and include more data validation features.</p></div></section>
+  <section class="case-row"><h2>Project links</h2><div><div class="case-links"><a class="btn btn-primary" href="project-ccj-docs.html">View documentation <svg class="i i-go" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn btn-ghost" href="https://github.com/IamGotu/CCJ_SYSTEM_PROJECT" target="_blank" rel="noopener">GitHub repository <svg class="i" aria-hidden="true"><use href="#i-ext"/></svg></a></div></div></section>
+  <nav class="pager" aria-label="More projects"><a class="prev" href="projects.html"><small>Back to</small><span>All projects</span></a><a class="next" href="project-salamatdoc.html"><small>Next project</small><span>SalamatDoc Clinic System</span></a></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-main">
+      <div>
+        <h2>Let's work together</h2>
+        <p>I'm open to IT support, hardware and systems roles. Send me a message and I'll reply as soon as I can.</p>
+        <div class="email-row">
+          <!-- TODO: replace both copies of the email below with your real address -->
+          <span class="email-chip"><a href="mailto:your.email@example.com" style="text-decoration:none">your.email@example.com</a>
+            <button type="button" data-copy="your.email@example.com" aria-label="Copy email address"><svg class="i" aria-hidden="true"><use href="#i-copy"/></svg><span>Copy</span></button></span>
+        </div>
+      </div>
+      <div class="footer-links">
+        <!-- TODO: replace each # with your real profile link -->
+        <a href="https://github.com/" target="_blank" rel="noopener">GitHub <svg class="i" aria-hidden="true"><use href="#i-ext"/></svg></a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn <svg class="i" aria-hidden="true"><use href="#i-ext"/></svg></a>
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook <svg class="i" aria-hidden="true"><use href="#i-ext"/></svg></a>
+        <a href="ELEVENCIONADO_JEORGE_ANDREI_RESUME.pdf" target="_blank" rel="noopener">Resume (PDF) <svg class="i" aria-hidden="true"><use href="#i-ext"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <span>&copy; 2026 Jeorge Andrei Elevencionado</span>
+      <span class="clock"><span class="pulse" aria-hidden="true"></span>Local time in Manila <b data-clock>--:--</b></span>
+      <button class="to-top" type="button" data-to-top>Back to top <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+    </div>
+  </div>
+</footer>
+<button class="icon-btn fab" type="button" data-to-top aria-label="Back to top"><svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+<script src="script.js"></script>
+</body>
+</html>

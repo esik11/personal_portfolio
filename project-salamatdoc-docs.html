@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SalamatDoc system documentation | Jeorge Andrei</title>
+<meta name="description" content="Screenshots of the Online Integrated Information System for SalamatDoc Clinic, showing the main features and screens.">
+<meta name="theme-color" content="#071f18">
+<link rel="icon" type="image/webp" href="images/kise-pageicon.webp">
+<link rel="preload" href="fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/instrument.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+<script>
+  /* Set the theme before first paint so there is no flash */
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem('theme'); } catch (e) {}
+    if (!t) t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    document.documentElement.dataset.theme = t;
+    document.documentElement.classList.add('js');
+  })();
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+<symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+<symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+<symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></symbol>
+<symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></symbol>
+<symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></symbol>
+<symbol id="i-camera" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13.5" r="3.5"/></symbol>
+<symbol id="i-pen" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1-4L16 5l3 3L8 19z"/><path d="M14 7l3 3"/></symbol>
+<symbol id="i-shapes" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="8" height="8" rx="1"/><circle cx="17" cy="7" r="4"/><path d="M12 21l4.5-8 4.5 8z"/></symbol>
+<symbol id="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a1 1 0 0 1 1-1h9"/></symbol>
+<symbol id="i-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></symbol>
+<symbol id="i-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></symbol>
+</defs></svg>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.php" aria-label="Jeorge Andrei, home"><span class="brand-mark">JA</span><span>Jeorge Andrei</span></a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href="index.php">Home</a><a href="about.html">About me</a><a href="internship.html">Internship</a><a href="projects.html" aria-current="page">Projects</a>
+      <a class="btn btn-ghost btn-sm" href="ELEVENCIONADO_JEORGE_ANDREI_RESUME.pdf" target="_blank" rel="noopener">Resume <svg class="i" aria-hidden="true"><use href="#i-ext"/></svg></a>
+    </nav>
+    <div class="header-tools">
+      <button class="icon-btn theme-toggle" type="button" aria-label="Switch theme"><svg class="i i-sun" aria-hidden="true"><use href="#i-sun"/></svg><svg class="i i-moon" aria-hidden="true"><use href="#i-moon"/></svg></button>
+      <button class="icon-btn menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><svg class="i" aria-hidden="true"><use href="#i-menu"/></svg></button>
+    </div>
+  </div>
+  <div class="progress" aria-hidden="true"></div>
+</header>
+<main id="main">
+<nav class="subnav" aria-label="Project pages"><div class="wrap"><a href="project-salamatdoc.html">Overview</a><a href="project-salamatdoc-docs.html" aria-current="page">Documentation</a></div></nav><div class="wrap">
+  <header class="case-head">
+    <a class="crumb" href="project-salamatdoc.html"><svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg> Back to project</a>
+    <h1 style="max-width:20ch">SalamatDoc system documentation</h1>
+    <p class="lede muted">Screenshots of the Online Integrated Information System for SalamatDoc Clinic, showing the main features and screens. Click a screenshot to enlarge it.</p>
+  </header>
+  <div class="docs" data-lightbox><article class="doc" data-reveal style="--d:0.00s"><div class="screen"><div class="screen-bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="images/salamatdoc-screenshots/landingpage-salamatdoc.png" alt="SalamatDoc landing page" loading="lazy"></div><div><h3>Landing Page</h3><p>Main entry point featuring clinic information, services overview, and quick access to patient registration and login.</p></div></article><article class="doc" data-reveal style="--d:0.08s"><div class="screen"><div class="screen-bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="images/salamatdoc-screenshots/dashboard-salamatdoc.png" alt="SalamatDoc dashboard" loading="lazy"></div><div><h3>Dashboard</h3><p>Centralized admin dashboard with key metrics, recent activities, appointment statistics, and system overview at a glance.</p></div></article><article class="doc" data-reveal style="--d:0.00s"><div class="screen"><div class="screen-bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="images/salamatdoc-screenshots/patientmanagement-salamatdoc.png" alt="Patient management" loading="lazy"></div><div><h3>Patient Management</h3><p>Complete patient records management with search functionality, patient details, medical history, and records organization.</p></div></article><article class="doc" data-reveal style="--d:0.08s"><div class="screen"><div class="screen-bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="images/salamatdoc-screenshots/patientoverview-salamtdoc.png" alt="Patient overview" loading="lazy"></div><div><h3>Patient Overview</h3><p>Detailed patient profile showing personal information, medical history, appointment records, and treatment details.</p></div></article><article class="doc" data-reveal style="--d:0.00s"><div class="screen"><div class="screen-bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="images/salamatdoc-screenshots/appointmentscheduling-salamatdoc.png" alt="Appointment scheduling" loading="lazy"></div><div><h3>Appointment Scheduling</h3><p>Intuitive appointment booking interface with calendar view, time slot management, and automated scheduling system.</p></div></article><article class="doc" data-reveal style="--d:0.08s"><div class="screen"><div class="screen-bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="images/salamatdoc-screenshots/consultationmanagement-slmtdoc.png" alt="Consultation management" loading="lazy"></div><div><h3>Consultation Management</h3><p>Comprehensive consultation tracking with patient diagnosis, treatment plans, prescriptions, and follow-up scheduling.</p></div></article></div>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-main">
+      <div>
+        <h2>Let's work together</h2>
+        <p>I'm open to IT support, hardware and systems roles. Send me a message and I'll reply as soon as I can.</p>
+        <div class="email-row">
+          <!-- TODO: replace both copies of the email below with your real address -->
+          <span class="email-chip"><a href="mailto:your.email@example.com" style="text-decoration:none">your.email@example.com</a>
+            <button type="button" data-copy="your.email@example.com" aria-label="Copy email address"><svg class="i" aria-hidden="true"><use href="#i-copy"/></svg><span>Copy</span></button></span>
+        </div>
+      </div>
+      <div class="footer-links">
+        <!-- TODO: replace each # with your real profile link -->
+        <a href="https://github.com/" target="_blank" rel="noopener">GitHub <svg class="i" aria-hidden="true"><use href="#i-ext"/></svg></a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn <svg class="i" aria-hidden="true"><use href="#i-ext"/></svg></a>
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook <svg class="i" aria-hidden="true"><use href="#i-ext"/></svg></a>
+        <a href="ELEVENCIONADO_JEORGE_ANDREI_RESUME.pdf" target="_blank" rel="noopener">Resume (PDF) <svg class="i" aria-hidden="true"><use href="#i-ext"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <span>&copy; 2026 Jeorge Andrei Elevencionado</span>
+      <span class="clock"><span class="pulse" aria-hidden="true"></span>Local time in Manila <b data-clock>--:--</b></span>
+      <button class="to-top" type="button" data-to-top>Back to top <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+    </div>
+  </div>
+</footer>
+<button class="icon-btn fab" type="button" data-to-top aria-label="Back to top"><svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+<script src="script.js"></script>
+</body>
+</html>
