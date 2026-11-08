@@ -1,7 +1,7 @@
 /* ==========================================================================
    Jeorge Andrei — Portfolio
-   Theme: a circuit board. Solder-mask green, copper traces, silkscreen white.
-   Edit the colors in the :root blocks below to re-skin the whole site.
+   Theme: Modern Startup - Midnight Black, Pure White, Lime Green Accent
+   60% Midnight Black | 30% Pure White | 10% Lime Green (60/30/10 rule)
    ========================================================================== */
 
 @font-face {
@@ -27,22 +27,22 @@
 
 /* ---------- Tokens ---------- */
 :root {
-  /* Dark board (default) */
-  --bg: #071f18;
-  --bg-2: #0c2b22;
-  --bg-3: #113628;
-  --ink: #edf1e8;
-  --muted: #9bb3a6;
-  --line: rgba(237, 241, 232, 0.14);
-  --line-strong: rgba(237, 241, 232, 0.28);
-  --copper: #e39a58;          /* accent fills, borders, big text */
-  --copper-text: #efab72;     /* accent used as small text */
-  --copper-ink: #1d1006;      /* text on top of copper */
-  --trace: #2c7a60;
-  --chip: #031610;
-  --chip-ink: #edf1e8;
-  --ok: #6fe3a0;
-  --shadow: 0 24px 60px -24px rgba(0, 0, 0, 0.6);
+  /* Dark theme (default) - Midnight & Lime Startup Style */
+  --bg: #0F1419;              /* 60% - Soft midnight black (main background) */
+  --bg-2: #1A1F26;            /* Card backgrounds (slightly lighter) */
+  --bg-3: #252B33;            /* Hover states, borders */
+  --ink: #FFFFFF;             /* 30% - Pure white (main text) */
+  --muted: #9CA3AF;           /* Muted text, secondary content */
+  --line: rgba(255, 255, 255, 0.08);      /* Subtle borders */
+  --line-strong: rgba(255, 255, 255, 0.15); /* Stronger borders */
+  --copper: #9EE73C;          /* 10% - Lime green accent (buttons, highlights) */
+  --copper-text: #B4FF39;     /* Brighter lime for large text/numbers */
+  --copper-ink: #0F1419;      /* Dark text on lime backgrounds */
+  --trace: #7BC62D;           /* Darker lime for subtle elements */
+  --chip: #0A0E0F;            /* Very dark chip/code backgrounds */
+  --chip-ink: #FFFFFF;        /* White text on dark chips */
+  --ok: #9EE73C;              /* Success state (lime green) */
+  --shadow: 0 24px 60px -24px rgba(0, 0, 0, 0.8);
 
   --font-display: "Bricolage", "Avenir Next", "Segoe UI", system-ui, sans-serif;
   --font-body: "Instrument", "Avenir Next", "Segoe UI", system-ui, sans-serif;
@@ -61,21 +61,22 @@
 }
 
 :root[data-theme="light"] {
-  --bg: #eef2e9;
-  --bg-2: #e2e9dc;
-  --bg-3: #d5dfcd;
-  --ink: #0a2a21;
-  --muted: #4d675b;
-  --line: rgba(10, 42, 33, 0.16);
-  --line-strong: rgba(10, 42, 33, 0.34);
-  --copper: #c97d3a;
-  --copper-text: #96521a;
-  --copper-ink: #1d1006;
-  --trace: #7ba693;
-  --chip: #0a2a21;
-  --chip-ink: #eef2e9;
-  --ok: #1d8a52;
-  --shadow: 0 24px 50px -28px rgba(10, 42, 33, 0.45);
+  /* Light theme - Inverted with darker lime for readability */
+  --bg: #FFFFFF;              /* Pure white background */
+  --bg-2: #F9FAFB;            /* Light gray for cards */
+  --bg-3: #F3F4F6;            /* Hover states */
+  --ink: #0F1419;             /* Dark text */
+  --muted: #6B7280;           /* Muted gray text */
+  --line: rgba(15, 20, 25, 0.08);
+  --line-strong: rgba(15, 20, 25, 0.15);
+  --copper: #7BC62D;          /* Darker lime for light mode (better contrast) */
+  --copper-text: #6BA828;     /* Even darker for small text */
+  --copper-ink: #FFFFFF;      /* White text on lime */
+  --trace: #9EE73C;           /* Lighter lime for subtle elements */
+  --chip: #F3F4F6;            /* Light chip backgrounds */
+  --chip-ink: #0F1419;        /* Dark text on light chips */
+  --ok: #7BC62D;              /* Success state */
+  --shadow: 0 24px 50px -28px rgba(15, 20, 25, 0.25);
   color-scheme: light;
 }
 

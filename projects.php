@@ -2,7 +2,7 @@
 <main id="main">
 <section class="page-head"><div class="wrap">
   <h1>Projects</h1>
-  <p class="lede">Content creation, web development, and freelance work showcasing my remote capabilities.</p>
+  <p class="lede">Web development work and side projects showcasing my technical skills and adaptability.</p>
 </div></section>
 <nav class="subnav" aria-label="Project sections"><div class="wrap">
   <a href="#featured" class="is-active">Featured work</a>
@@ -11,28 +11,28 @@
 
 <section class="section" id="featured" style="padding-top:clamp(2.5rem,6vw,4.5rem)">
   <div class="wrap">
-    <div class="section-head"><div><h2>Featured work</h2><p>Content creation and web development projects showcasing my remote work capabilities.</p></div></div>
+    <div class="section-head"><div><h2>Featured work</h2><p>Web development projects and side hobbies demonstrating technical and creative skills.</p></div></div>
     <div class="filters" role="group" aria-label="Filter projects">
       <button class="filter" type="button" data-filter="all" aria-pressed="true">All</button>
       <button class="filter" type="button" data-filter="video" aria-pressed="false">Video</button>
       <button class="filter" type="button" data-filter="design" aria-pressed="false">Web Design</button>
     </div>
-    <div class="side-grid"><a class="side-card featured" href="https://www.youtube.com/channel/UCuJYEWTWyWxIFnkayckLn5w" target="_blank" rel="noopener" data-category="video" data-reveal style="--d:0.00s">
-  <div class="thumb"><img src="images/side/storytelling_profile.jpg" alt="Storytelling YouTube Channel"><span class="platform">YouTube</span><span class="glyph"><svg class="i" aria-hidden="true"><use href="#i-play"/></svg></span></div>
-  <div class="side-body"><h3>Storytelling YouTube Channel</h3><p>Viral content recreation with professional editing. Achieved 229K+ views and 455 subscribers in just one month using CapCut for video production.</p>
-    <div class="side-meta"><span>229K views | 455 subscribers</span><span class="go">Watch channel <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></span></div></div>
-</a><a class="side-card featured" href="https://www.youtube.com/channel/UChgBdkvngZsTE6MItCQzadg" target="_blank" rel="noopener" data-category="video" data-reveal style="--d:0.06s">
-  <div class="thumb"><img src="images/side/ranking_profile.jpg" alt="Ranking YouTube Channel"><span class="platform">YouTube</span><span class="glyph"><svg class="i" aria-hidden="true"><use href="#i-play"/></svg></span></div>
-  <div class="side-body"><h3>Ranking YouTube Channel</h3><p>Data-driven content that resonates with audiences. Grew to 136K+ views and 135 subscribers in one month through strategic content selection and editing.</p>
-    <div class="side-meta"><span>136K views | 135 subscribers</span><span class="go">Watch channel <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></span></div></div>
-</a><a class="side-card" href="#" data-category="design" data-reveal style="--d:0.12s">
+    <div class="side-grid"><a class="side-card featured" href="#" data-category="design" data-reveal style="--d:0.00s">
   <div class="thumb"><span class="platform">Web Development</span><span class="glyph"><svg class="i" aria-hidden="true"><use href="#i-shapes"/></svg></span></div>
   <div class="side-body"><h3>DOi PC Commercial Website</h3><p>Full-featured e-commerce landing page with product catalog, custom PC builder tool, and service showcase. Built with PHP, CSS, and JavaScript.</p>
     <div class="side-meta"><span>In Development</span><span class="go">View details <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></span></div></div>
-</a><a class="side-card" href="#" data-category="design" data-reveal style="--d:0.18s">
+</a><a class="side-card featured" href="#" data-category="design" data-reveal style="--d:0.06s">
   <div class="thumb"><span class="platform">Wix</span><span class="glyph"><svg class="i" aria-hidden="true"><use href="#i-shapes"/></svg></span></div>
   <div class="side-body"><h3>Music Licensing Platform</h3><p>Custom Wix website for entertainment music industry client. Features artist song rental system with payment integration and content management.</p>
     <div class="side-meta"><span>Freelance Project</span><span class="go">Completed <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></span></div></div>
+</a><a class="side-card" href="https://www.youtube.com/channel/UCuJYEWTWyWxIFnkayckLn5w" target="_blank" rel="noopener" data-category="video" data-reveal style="--d:0.12s">
+  <div class="thumb"><img src="images/side/storytelling_profile.jpg" alt="Storytelling YouTube Channel"><span class="platform">YouTube</span><span class="glyph"><svg class="i" aria-hidden="true"><use href="#i-play"/></svg></span></div>
+  <div class="side-body"><h3>Video Editing (Side Hobby)</h3><p>Storytelling channel exploring video editing with CapCut. A creative outlet that demonstrates my ability to learn new tools quickly—gained 229K+ views as a learning project.</p>
+    <div class="side-meta"><span>Hobby project</span><span class="go">Watch channel <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></span></div></div>
+</a><a class="side-card" href="https://www.youtube.com/channel/UChgBdkvngZsTE6MItCQzadg" target="_blank" rel="noopener" data-category="video" data-reveal style="--d:0.18s">
+  <div class="thumb"><img src="images/side/ranking_profile.jpg" alt="Ranking YouTube Channel"><span class="platform">YouTube</span><span class="glyph"><svg class="i" aria-hidden="true"><use href="#i-play"/></svg></span></div>
+  <div class="side-body"><h3>Content Creation (Side Project)</h3><p>Ranking channel where I experimented with content strategy and editing techniques. Shows my curiosity and willingness to explore beyond my core IT skills.</p>
+    <div class="side-meta"><span>Side project</span><span class="go">Watch channel <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></span></div></div>
 </a></div>
     <p class="empty-note">No projects match the selected filter.</p>
   </div>

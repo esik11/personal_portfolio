@@ -2,11 +2,11 @@
   <div class="wrap">
     <div class="footer-main">
       <div>
-        <h2>Let's create together</h2>
-        <p>Available for remote opportunities in video editing, web development, and virtual assistance. Whether you need engaging content created, a website built, or reliable support for your team, I'm ready to contribute.</p>
+        <h2>Let's build something together</h2>
+        <p>Available for remote web development and design opportunities. I build functional, responsive websites and full-stack systems. Whether you need a custom web application, a Wix site, or technical support for your team, I'm ready to contribute.</p>
         <div class="email-row">
           <!-- TODO: replace both copies of the email below with your real address -->
-          <span class="email-chip"><a href="mailto:jeorgeandrei1@gmail.com" style="text-decoration:none">jeorgeandrei1@gmail.com</a>
+          <span class="email-chip"><a href="mailto:jeorgeandreielevencionado@gmail.com" style="text-decoration:none">jeorgeandreielevencionado@gmail.com</a>
             <button type="button" data-copy="your.email@example.com" aria-label="Copy email address"><svg class="i" aria-hidden="true"><use href="#i-copy"/></svg><span>Copy</span></button></span>
         </div>
       </div>
